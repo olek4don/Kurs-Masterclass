@@ -20,6 +20,11 @@ class Song(object):
         self.artist = artist
         self.duration = duration
 
+    def get_title(self):
+        return self.title
+
+    name = property(get_title)
+
 
 class Album:
     """Class to represent an Album, using it's track lists
@@ -55,10 +60,13 @@ class Album:
                 Otherwise, the songe will be added to the end of the list.
                 Defaults to None.
         """
-        if position is None:
-            self.tracks.append(song)
-        else:
-            self.tracks.insert(position, song)
+        song_found = find_object(song, self.tracks)
+        if song_found is None:
+            song_found = Song(song, self.artist)
+            if position is None:
+                self.tracks.append(song_found)
+            else:
+                self.tracks.insert(position, song_found)
 
 
 class Artist:
@@ -104,9 +112,9 @@ class Artist:
             album_found = Album(name, year, self)
             self.add_album(album_found)
         else:
-            print("Found album" + name)
+            print("Found album " + name)
 
-        album_found.add_song(title);
+        album_found.add_song(title)
 
 
 def find_object(field, object_list):
