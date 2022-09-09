@@ -15,3 +15,6 @@ print(tim)
 
 tim.lives -= 1
 print(tim)
+
+tim.lives = 9
+print(tim)
