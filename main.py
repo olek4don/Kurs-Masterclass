@@ -18,3 +18,12 @@ print(tim)
 
 tim.lives = 9
 print(tim)
+
+tim.level += 5
+print(tim)
+
+tim.level = 3
+print(tim)
+
+tim.score = 500
+print(tim)
