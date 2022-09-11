@@ -15,3 +15,4 @@ class Enemy:
             
     def __str__(self):
         return f"Name: {self.name}, Lives: {self.lives}, Hit points: {self.hit_points}"
+    
