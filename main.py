@@ -11,4 +11,3 @@ print(random_monster)
 
 random_monster.take_damage(9)
 print(random_monster)
-
