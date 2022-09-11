@@ -43,3 +43,4 @@ class Player(object):
 
     def __str__(self) -> str:
         return f"Name: {self.name}, Lives: {self.lives}, Level: {self.level}, Score: {self.score}"
+     

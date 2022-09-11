@@ -1,29 +1,14 @@
-from player import Player
+from enemy import Enemy
 
-tim = Player("Tim")
+random_monster = Enemy("Basic enemy", 12, 1)
+print(random_monster)
 
-print(tim.name)
-print(tim.lives)
-tim.lives -= 1
-print(tim)
+random_monster.take_damage(4)
+print(random_monster)
 
-tim.lives -= 1
-print(tim)
+random_monster.take_damage(8)
+print(random_monster)
 
-tim.lives -= 1
-print(tim)
+random_monster.take_damage(9)
+print(random_monster)
 
-tim.lives -= 1
-print(tim)
-
-tim.lives = 9
-print(tim)
-
-tim.level += 5
-print(tim)
-
-tim.level = 3
-print(tim)
-
-tim.score = 500
-print(tim)
