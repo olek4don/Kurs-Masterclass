@@ -19,5 +19,12 @@ class Enemy(object):
     
 
 class Troll(Enemy):
-    pass
 
+    # def __init__(self, name):
+        # Enemy.__init__(self, name=name, lives=1, hit_points=23)
+
+    def __init__(self, name):
+        super().__init__(name=name, lives=1, hit_points=23)
+
+    def grunt(self):
+        print(f"Me {self.name}. {self.name} stomp you.")
