@@ -1,3 +1,6 @@
+import random
+
+
 # class Enemy:
 class Enemy(object): 
     
@@ -43,4 +46,10 @@ class Vampire(Enemy):
     def suction(self):
         print(f"I'm {self.name}. I will suck you out to death.")
         
+    def dodges(self):
+        if random.randint(1, 3) == 3:
+            print(f"***** {self.name} dodges *****")
+            return True
+        else:
+            return False
 
