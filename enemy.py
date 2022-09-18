@@ -57,3 +57,11 @@ class Vampire(Enemy):
         if not self.dodges():
             super().take_damage(damage=damage)
             
+class VampireKing(Vampire):
+    
+    def __init__(self, name):
+        super().__init__(name)
+        self._hit_points = 140
+        
+    def take_damage(self, damage):
+        super().take_damage(damage // 4)
