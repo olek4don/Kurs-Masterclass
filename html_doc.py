@@ -75,7 +75,7 @@ if __name__ == '__main__':
     new_body.add_tag('h1', 'Aggregation')
     new_body.add_tag('p', 'Unlike <strong>composition</strong>, aggregation uses existing instances'
                     " of object to uild up another object.")
-    new_body.add_tag('p', "The composed object doesn’t actually own the objects that it's composed of"
+    new_body.add_tag('p', "The composed object doesn't actually own the objects that it's composed of"
                     " - if it's destroyed, those objects continue to exist.")
 
     new_docType = DocType()
